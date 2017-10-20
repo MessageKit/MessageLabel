@@ -10,6 +10,7 @@
 		B006FA171F99F14F00509C46 /* MessageLabel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B006FA0D1F99F14E00509C46 /* MessageLabel.framework */; };
 		B006FA1C1F99F14F00509C46 /* MessageLabelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B006FA1B1F99F14F00509C46 /* MessageLabelTests.swift */; };
 		B006FA1E1F99F14F00509C46 /* MessageLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = B006FA101F99F14E00509C46 /* MessageLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B006FA291F99F6D300509C46 /* MessageLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B006FA281F99F6D300509C46 /* MessageLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		B006FA161F99F14F00509C46 /* MessageLabelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MessageLabelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B006FA1B1F99F14F00509C46 /* MessageLabelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageLabelTests.swift; sourceTree = "<group>"; };
 		B006FA1D1F99F14F00509C46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B006FA281F99F6D300509C46 /* MessageLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +55,8 @@
 		B006FA031F99F14E00509C46 = {
 			isa = PBXGroup;
 			children = (
-				B006FA0F1F99F14E00509C46 /* MessageLabel */,
-				B006FA1A1F99F14F00509C46 /* MessageLabelTests */,
+				B006FA0F1F99F14E00509C46 /* Sources */,
+				B006FA1A1F99F14F00509C46 /* Tests */,
 				B006FA0E1F99F14E00509C46 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,22 +70,23 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B006FA0F1F99F14E00509C46 /* MessageLabel */ = {
+		B006FA0F1F99F14E00509C46 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				B006FA101F99F14E00509C46 /* MessageLabel.h */,
 				B006FA111F99F14E00509C46 /* Info.plist */,
+				B006FA281F99F6D300509C46 /* MessageLabel.swift */,
 			);
-			path = MessageLabel;
+			path = Sources;
 			sourceTree = "<group>";
 		};
-		B006FA1A1F99F14F00509C46 /* MessageLabelTests */ = {
+		B006FA1A1F99F14F00509C46 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				B006FA1B1F99F14F00509C46 /* MessageLabelTests.swift */,
 				B006FA1D1F99F14F00509C46 /* Info.plist */,
 			);
-			path = MessageLabelTests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +151,7 @@
 				TargetAttributes = {
 					B006FA0C1F99F14E00509C46 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					B006FA151F99F14F00509C46 = {
@@ -196,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B006FA291F99F6D300509C46 /* MessageLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +339,7 @@
 		B006FA221F99F14F00509C46 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -346,6 +352,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.MessageKit.MessageLabel;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -354,6 +361,7 @@
 		B006FA231F99F14F00509C46 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -374,6 +382,7 @@
 		B006FA251F99F14F00509C46 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MessageLabelTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -387,6 +396,7 @@
 		B006FA261F99F14F00509C46 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MessageLabelTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
